@@ -7,6 +7,9 @@ export default {
 	theme: {
 		extend: {}
 	},
+	flyonui: {
+		themes: ['soft', 'dark']
+	},
 
 	plugins: [flyonui]
 } satisfies Config;
