@@ -8,7 +8,11 @@
 		Complication-free coordination for faraway friends and family.
 	</h3>
 	<div class="mt-3 flex gap-6">
-		<button type="button" class="btn btn-accent btn-gradient w-40">Create an event</button>
-		<button type="button" class="btn btn-accent btn-gradient w-40">Join an event</button>
+		<button type="button" class="btn btn-accent btn-gradient w-40"
+			><a href="/event/create">Create an event</a></button
+		>
+		<button type="button" class="btn btn-accent btn-gradient w-40"
+			><a href="/event/join">Join an event</a></button
+		>
 	</div>
 </div>
