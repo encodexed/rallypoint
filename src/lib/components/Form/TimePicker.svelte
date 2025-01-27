@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 
 	let timepicker: Node;
+	let { classes = '' } = $props();
 
 	onMount(() => {
 		flatpickr(timepicker, {
@@ -13,10 +14,13 @@
 	});
 </script>
 
-<input
-	type="text"
-	class="input max-w-sm"
-	placeholder="HH:MM"
-	id="flatpickr-time"
-	bind:this={timepicker}
-/>
+<div class={classes}>
+	<label class="label label-text self-start" for="flatpickr-date">Time</label>
+	<input
+		type="text"
+		class="input max-w-sm"
+		placeholder="HH:MM"
+		id="flatpickr-time"
+		bind:this={timepicker}
+	/>
+</div>

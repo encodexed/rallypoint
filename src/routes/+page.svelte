@@ -1,8 +1,4 @@
-<script>
-	import Centre from '$lib/components/Wrapper/Centre.svelte';
-</script>
-
-<Centre classes="gap-4">
+<div class="flex h-full w-full flex-col items-center justify-center gap-4">
 	<h1
 		class="w-fit bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-6xl/relaxed font-black text-transparent"
 	>
@@ -19,4 +15,4 @@
 			><a href="/event/join">Join an event</a></button
 		>
 	</div>
-</Centre>
+</div>
