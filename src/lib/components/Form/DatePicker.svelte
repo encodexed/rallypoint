@@ -4,10 +4,13 @@
 
 	let datepicker: Node;
 	let { classes = '' } = $props();
+	let value = new Date(Date.now()).toISOString();
 
 	onMount(() => {
 		flatpickr(datepicker, {
-			monthSelectorType: 'static',
+			monthSelectorType: 'dropdown',
+			altInput: true,
+			altFormat: 'j F, Y',
 			locale: 'default'
 		});
 	});
@@ -15,11 +18,5 @@
 
 <div class={classes}>
 	<label class="label label-text self-start" for="flatpickr-date">Date</label>
-	<input
-		type="text"
-		class="input max-w-sm"
-		placeholder="YYYY-MM-DD"
-		id="flatpickr-date"
-		bind:this={datepicker}
-	/>
+	<input type="text" class="input max-w-sm" id="flatpickr-date" {value} bind:this={datepicker} />
 </div>
